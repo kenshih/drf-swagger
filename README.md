@@ -11,10 +11,36 @@ curl http://127.0.0.1:8000/api
 curl -X POST http://127.0.0.1:8000/api/ \
      -H "Content-Type: application/json" \
      --data '{ "title":"My Life as a Guinea Pig, the Sequel", "year_published": 2024 }'
+
+# alternatively...
+brew install hurl
+hurl hurl/get.hurl
+hurl hurl/post.hurl # this creates a record, not idempotently, so you'll get duplicates when running again
+hurl hurl/spectacular-schema.hurl
 ```
+# Urls of swagger-land
+
+drf-spectacular
+- http://127.0.0.1:8000/api/schema/ - triggers download of yaml when in browser
+- http://127.0.0.1:8000/api/schema/swagger-ui/
+- http://127.0.0.1:8000/api/schema/redoc/
+
+drf-yasg
+- http://127.0.0.1:8000/api/swagger/
+- http://127.0.0.1:8000/api/swagger.json/
+- http://127.0.0.1:8000/api/swagger.yaml/ - triggers download of yaml when in browser
+- http://127.0.0.1:8000/api/redoc/
 
 # setup
 
 random tutorial: 
 * https://builtwithdjango.com/blog/basic-django-setup
 * https://medium.com/django-pycharm-integration/how-to-create-a-simple-rest-api-with-django-ec9829fd5415
+
+yasg: https://drf-yasg.readthedocs.io/en/stable/readme.html#usage
+
+random gotchas
+```
+# for yasg, needed
+poetry add setuptools
+```
