@@ -52,6 +52,8 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'testing out 2 swagger impls',
     'VERSION': '0.1.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    'PREPROCESSING_HOOKS': ['drf_swagger.custom_hooks.custom_preprocessing_hook'],
+
 }
 
 MIDDLEWARE = [
