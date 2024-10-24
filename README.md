@@ -1,3 +1,10 @@
+# drf-swagger
+
+An experiment running drf-yasg & drf-spectacular on Django 4.2, to see how they play together.
+
+The purpose of this it to plan a transition from yasg to spectacular, with minimal disruption, allowing for a gradual cutover and ability to preview changes in various environments before doing the whole cutover.
+
+
 # run project
 ```
 poetry run python manage.py runserver
