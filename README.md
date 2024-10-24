@@ -16,7 +16,8 @@ curl -X POST http://127.0.0.1:8000/api/ \
 brew install hurl
 hurl hurl/get.hurl
 hurl hurl/post.hurl # this creates a record, not idempotently, so you'll get duplicates when running again
-hurl hurl/spectacular-schema.hurl
+hurl hurl/schema-spectacular.hurl
+hurl hurl/schema-yasg.hurl
 ```
 # Urls of swagger-land
 

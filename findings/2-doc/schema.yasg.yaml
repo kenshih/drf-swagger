@@ -1,0 +1,87 @@
+swagger: '2.0'
+info:
+  title: drf-swagger API
+  description: test
+  contact:
+    email: ken.shih@sironamedical.com
+  license:
+    name: BSD License
+  version: v0
+host: 127.0.0.1:8000
+schemes:
+- http
+basePath: /
+consumes:
+- application/json
+produces:
+- application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+- Basic: []
+paths:
+  /api/:
+    get:
+      operationId: api_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: api_create
+      description: ''
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+      - api
+    parameters: []
+  /api/schema/:
+    get:
+      operationId: api_schema_list
+      summary: OpenApi3 schema for this API. Format can be selected via content negotiation.
+      description: |-
+        - YAML: application/vnd.oai.openapi
+        - JSON: application/vnd.oai.openapi+json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      produces:
+      - application/vnd.oai.openapi
+      - application/yaml
+      - application/vnd.oai.openapi+json
+      - application/json
+      tags:
+      - api
+    parameters: []
+  /api/schema/redoc/:
+    get:
+      operationId: api_schema_redoc_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      produces: []
+      tags:
+      - api
+    parameters: []
+  /api/schema/swagger-ui/:
+    get:
+      operationId: api_schema_swagger-ui_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      produces: []
+      tags:
+      - api
+    parameters: []
+definitions: {}
